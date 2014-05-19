@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[CKS_Provider]
+(
+[Id] [int] NOT NULL IDENTITY(1, 1),
+[Title] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[CKS_Provider] ADD CONSTRAINT [PK_CKS_Provider] PRIMARY KEY CLUSTERED  ([Id]) ON [PRIMARY]
+GO

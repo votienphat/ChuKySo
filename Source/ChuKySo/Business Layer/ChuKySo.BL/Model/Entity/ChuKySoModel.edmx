@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ChuKySoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ChuKySoModelStoreContainer">
+          <EntitySet Name="CKS_Company" EntityType="ChuKySoModel.Store.CKS_Company" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CKS_Company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="TransTitle" Type="nvarchar" MaxLength="500" />
+          <Property Name="CompanyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ActiveDate" Type="datetime" />
+          <Property Name="LegalRepresentive" Type="nvarchar" MaxLength="100" />
+          <Property Name="LegalRepresentiveAddress" Type="nvarchar" MaxLength="500" />
+          <Property Name="AuthorizedCapital" Type="nvarchar" MaxLength="50" />
+          <Property Name="DescriptionMajor" Type="ntext" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="Directors" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Avatar" Type="ntext" />
+          <Property Name="AllowedDate" Type="datetime" />
+          <Property Name="IsDisabled" Type="bit" Nullable="false" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdateUser" Type="varchar" MaxLength="20" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ChuKySoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ChuKySoEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CKS_Company" EntityType="ChuKySoModel.CKS_Company" />
+        </EntityContainer>
+        <EntityType Name="CKS_Company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="TransTitle" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyType" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="LegalRepresentive" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LegalRepresentiveAddress" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="AuthorizedCapital" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DescriptionMajor" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Directors" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Avatar" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="AllowedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDisabled" Type="Boolean" Nullable="false" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ChuKySoModelStoreContainer" CdmEntityContainer="ChuKySoEntities">
+          <EntitySetMapping Name="CKS_Company">
+            <EntityTypeMapping TypeName="ChuKySoModel.CKS_Company">
+              <MappingFragment StoreEntitySet="CKS_Company">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TransTitle" ColumnName="TransTitle" />
+                <ScalarProperty Name="CompanyType" ColumnName="CompanyType" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+                <ScalarProperty Name="ActiveDate" ColumnName="ActiveDate" />
+                <ScalarProperty Name="LegalRepresentive" ColumnName="LegalRepresentive" />
+                <ScalarProperty Name="LegalRepresentiveAddress" ColumnName="LegalRepresentiveAddress" />
+                <ScalarProperty Name="AuthorizedCapital" ColumnName="AuthorizedCapital" />
+                <ScalarProperty Name="DescriptionMajor" ColumnName="DescriptionMajor" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Directors" ColumnName="Directors" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="AllowedDate" ColumnName="AllowedDate" />
+                <ScalarProperty Name="IsDisabled" ColumnName="IsDisabled" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
