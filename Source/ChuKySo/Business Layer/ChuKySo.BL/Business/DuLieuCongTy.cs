@@ -5,6 +5,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Web;
 using ChuKySo.BL.Business;
+using ChuKySo.BL.Model;
 using ChuKySo.BL.Model.Entity;
 using Common;
 using HtmlAgilityPack;
@@ -14,6 +15,72 @@ namespace ChuKySo.BL.Business
 {
     public class DuLieuCongTy : IDuLieuCongTy
     {
+        private Delegate _setTextCallback;
+
+        public void GetCompany(List<RequestCompanyModel> urls, Delegate setTextCallback = null)
+        {
+            _setTextCallback = setTextCallback;
+
+            foreach (var url in urls)
+            {
+                SearchingCompany(url.Url);
+            }
+        }
+
+        /// <summary>
+        /// Lấy danh sách khu vực
+        /// </summary>
+        /// <param name="siteUrl"></param>
+        /// <returns></returns>
+        /// <history>
+        /// 25/09/14 phat.vo: Create new
+        /// </history>
+        public List<AreaModel> GetArea(string siteUrl)
+        {
+            var result = new List<AreaModel>();
+
+            // Get province Id
+            var uri = new Uri(siteUrl);
+
+            string requestUrl = siteUrl,
+                referer = string.Empty,
+                html,
+                next,
+                domain = uri.OriginalString;
+
+            if (NetworkCommon.SendGetRequest(requestUrl, new CookieContainer(), referer, out html, out next, true))
+            {
+                var htmlDocument = new HtmlDocument();
+                htmlDocument.LoadHtml(html);
+
+                // Get body content
+                var table = htmlDocument.DocumentNode.Descendants("div")
+                    .FirstOrDefault(d => d.Attributes.Contains("class")
+                                         && d.Attributes["class"].Value.Contains("sidebar-navbar-collapse"));
+
+                if (table != null)
+                {
+                    var links = table.Descendants("li");
+
+                    foreach (var htmlNode in links)
+                    {
+                        var objLink = htmlNode.Descendants("a")
+                            .FirstOrDefault(x => x.Attributes.Contains("href") && x.Attributes["href"].Value.Contains("district"));
+                        if (objLink != null)
+                        {
+                            result.Add(new AreaModel
+                            {
+                                Url = string.Format("{0}{1}", domain, objLink.Attributes["href"].Value),
+                                Title = objLink.InnerText
+                            });
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+        
         /// <summary>
         /// Get company from site danhbadoanhnghiep.vn
         /// </summary>

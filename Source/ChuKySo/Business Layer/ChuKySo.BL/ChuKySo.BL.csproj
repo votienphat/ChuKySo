@@ -67,7 +67,10 @@
     <Compile Include="Business\Repository\BaseRepository.cs" />
     <Compile Include="Business\Repository\CompanyRepository.cs" />
     <Compile Include="Business\Scrapper.cs" />
+    <Compile Include="Enums\SiteId.cs" />
     <Compile Include="Interface\IDuLieuCongTy.cs" />
+    <Compile Include="Model\AreaModel.cs" />
+    <Compile Include="Model\RequestCompanyModel.cs" />
     <Compile Include="RepositoryFactory.cs" />
     <Compile Include="Interface\IDanhBaDoanhNghiep.cs" />
     <Compile Include="Interface\IBoCaoDn.cs" />

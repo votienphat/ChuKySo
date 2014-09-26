@@ -59,8 +59,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CompanyDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunningForm.Designer.cs">
+      <DependentUpon>RunningForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +81,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="App.config" />
+    <None Include="MyConfig\MyConfig.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +96,10 @@
     <ProjectReference Include="..\..\Business Layer\ChuKySo.BL\ChuKySo.BL.csproj">
       <Project>{1c66c79e-2a01-4745-9283-6901a4cfd64e}</Project>
       <Name>ChuKySo.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyConfig\MyConfig.csproj">
+      <Project>{bcfb0f50-3bf8-4309-b0da-9fe00e0741fb}</Project>
+      <Name>MyConfig</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
