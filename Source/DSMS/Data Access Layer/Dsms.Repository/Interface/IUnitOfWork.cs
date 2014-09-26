@@ -18,7 +18,7 @@ namespace Dsms.Repository
         /// <summary>
         /// Call this to commit the unit of work
         /// </summary>
-        void Commit();
+        int Commit();
 
         /// <summary>
         /// Return the database reference for this UOW

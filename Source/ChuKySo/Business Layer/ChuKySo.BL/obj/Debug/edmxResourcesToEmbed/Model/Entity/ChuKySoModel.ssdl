@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChuKySoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ChuKySoModelStoreContainer">
+    <EntitySet Name="CKS_Company" EntityType="ChuKySoModel.Store.CKS_Company" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="CKS_Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" />
+    <Property Name="TransTitle" Type="nvarchar" MaxLength="500" />
+    <Property Name="CompanyType" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Website" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActiveDate" Type="datetime" />
+    <Property Name="LegalRepresentive" Type="nvarchar" MaxLength="100" />
+    <Property Name="LegalRepresentiveAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="AuthorizedCapital" Type="nvarchar" MaxLength="50" />
+    <Property Name="DescriptionMajor" Type="ntext" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Directors" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Avatar" Type="ntext" />
+    <Property Name="AllowedDate" Type="datetime" />
+    <Property Name="IsDisabled" Type="bit" Nullable="false" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateUser" Type="varchar" MaxLength="20" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>

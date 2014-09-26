@@ -1,0 +1,7 @@
+D:\Company\VSC\VSC\trunk\Source\Framework\Common\bin\Release\Common.dll
+D:\Company\VSC\VSC\trunk\Source\Framework\Common\bin\Release\Common.pdb
+D:\Company\VSC\VSC\trunk\Source\Framework\Common\bin\Release\Newtonsoft.Json.dll
+D:\Company\VSC\VSC\trunk\Source\Framework\Common\bin\Release\Newtonsoft.Json.xml
+D:\Company\VSC\VSC\trunk\Source\Framework\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+D:\Company\VSC\VSC\trunk\Source\Framework\Common\obj\Release\Common.dll
+D:\Company\VSC\VSC\trunk\Source\Framework\Common\obj\Release\Common.pdb

@@ -45,16 +45,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BaseRepository.cs" />
+    <Compile Include="Business\ContractRepository.cs" />
     <Compile Include="Business\CompanyRepository.cs" />
     <Compile Include="Business\UnitOfWork.cs" />
     <Compile Include="Interface\IBaseRepository.cs" />
+    <Compile Include="Interface\IContractRepository.cs" />
     <Compile Include="Interface\IUnitOfWork.cs" />
     <Compile Include="Interface\ICompanyRepository.cs" />
+    <Compile Include="Models\CompanyDTO.cs" />
+    <Compile Include="Models\CompanyRegisterInfo.cs" />
+    <Compile Include="Models\Request\BaseRequest.cs" />
+    <Compile Include="Models\Request\SearchCompanyRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Dsms.Entity\Dsms.Entity.csproj">
       <Project>{3c075466-c304-423e-9820-9ceb8c7d3449}</Project>

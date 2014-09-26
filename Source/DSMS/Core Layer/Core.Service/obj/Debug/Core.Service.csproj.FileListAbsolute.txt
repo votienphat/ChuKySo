@@ -1,0 +1,16 @@
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Core.Service.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Core.Service.pdb
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Core.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Windsor.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Core.xml
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Windsor.xml
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\obj\Debug\Core.Service.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\obj\Debug\Core.Service.pdb
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\bin\Debug\Core.Service.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\bin\Debug\Core.Service.pdb
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\bin\Debug\Castle.Core.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\bin\Debug\Castle.Windsor.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\bin\Debug\Castle.Core.xml
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\bin\Debug\Castle.Windsor.xml
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\obj\Debug\Core.Service.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Core Layer\Core.Service\obj\Debug\Core.Service.pdb

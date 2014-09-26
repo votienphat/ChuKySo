@@ -1,0 +1,11 @@
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\obj\Debug\Dsms.Service.csprojResolveAssemblyReference.cache
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\Dsms.Service.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\Dsms.Service.pdb
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\Dsms.Entity.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\Dsms.Repository.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\EntityFramework.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\Dsms.Entity.pdb
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\Dsms.Repository.pdb
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\bin\Debug\EntityFramework.xml
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\obj\Debug\Dsms.Service.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Business Layer\Dsms.Service\obj\Debug\Dsms.Service.pdb

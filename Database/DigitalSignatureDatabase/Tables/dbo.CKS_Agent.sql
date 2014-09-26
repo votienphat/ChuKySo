@@ -1,7 +1,6 @@
 CREATE TABLE [dbo].[CKS_Agent]
 (
 [Id] [int] NOT NULL IDENTITY(1, 1),
-[ParentId] [int] NULL,
 [Title] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Firstname] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Lastname] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
@@ -12,11 +11,15 @@ CREATE TABLE [dbo].[CKS_Agent]
 [Phone] [nvarchar] (20) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Address] [nvarchar] (500) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Status] [int] NOT NULL,
+[IsDisabled] [bit] NOT NULL CONSTRAINT [DF_CKS_Agent_IsDisabled] DEFAULT ((0)),
 [CreateDate] [datetime] NOT NULL CONSTRAINT [DF_CKS_Agent_CreateDate] DEFAULT (getdate()),
 [UpdateDate] [datetime] NULL
 ) ON [PRIMARY]
+ALTER TABLE [dbo].[CKS_Agent] ADD 
+CONSTRAINT [PK_CKS_Agent] PRIMARY KEY CLUSTERED  ([Id]) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[CKS_Agent] ADD CONSTRAINT [PK_CKS_Agent] PRIMARY KEY CLUSTERED  ([Id]) ON [PRIMARY]
+EXEC sp_addextendedproperty N'MS_Description', N'', 'SCHEMA', N'dbo', 'TABLE', N'CKS_Agent', 'COLUMN', N'IsDisabled'
 GO
+
 EXEC sp_addextendedproperty N'MS_Description', N'Status of agent. 0: New, 1: Active, 2: Blocked', 'SCHEMA', N'dbo', 'TABLE', N'CKS_Agent', 'COLUMN', N'Status'
 GO

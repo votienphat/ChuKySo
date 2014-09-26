@@ -4,51 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ChuKySoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="ChuKySoModelStoreContainer">
-          <EntitySet Name="CKS_Agent" EntityType="ChuKySoModel.Store.CKS_Agent" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CKS_AgentProvider" EntityType="ChuKySoModel.Store.CKS_AgentProvider" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CKS_AgentTokenType" EntityType="ChuKySoModel.Store.CKS_AgentTokenType" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CKS_AgentUser" EntityType="ChuKySoModel.Store.CKS_AgentUser" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CKS_Company" EntityType="ChuKySoModel.Store.CKS_Company" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CKS_Contract" EntityType="ChuKySoModel.Store.CKS_Contract" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CKS_Provider" EntityType="ChuKySoModel.Store.CKS_Provider" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CKS_TokenType" EntityType="ChuKySoModel.Store.CKS_TokenType" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="sysdiagrams" EntityType="ChuKySoModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Agent" Association="ChuKySoModel.Store.FK_CKS_AgentProvider_CKS_Agent">
-            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
-            <End Role="CKS_AgentProvider" EntitySet="CKS_AgentProvider" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Provider" Association="ChuKySoModel.Store.FK_CKS_AgentProvider_CKS_Provider">
-            <End Role="CKS_Provider" EntitySet="CKS_Provider" />
-            <End Role="CKS_AgentProvider" EntitySet="CKS_AgentProvider" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_Agent" Association="ChuKySoModel.Store.FK_CKS_AgentTokenType_CKS_Agent">
-            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
-            <End Role="CKS_AgentTokenType" EntitySet="CKS_AgentTokenType" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_TokenType" Association="ChuKySoModel.Store.FK_CKS_AgentTokenType_CKS_TokenType">
-            <End Role="CKS_TokenType" EntitySet="CKS_TokenType" />
-            <End Role="CKS_AgentTokenType" EntitySet="CKS_AgentTokenType" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentUser_CKS_Agent" Association="ChuKySoModel.Store.FK_CKS_AgentUser_CKS_Agent">
-            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
-            <End Role="CKS_AgentUser" EntitySet="CKS_AgentUser" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CKS_Contract_CKS_Agent" Association="ChuKySoModel.Store.FK_CKS_Contract_CKS_Agent">
-            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
-            <End Role="CKS_Contract" EntitySet="CKS_Contract" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CKS_Contract_CKS_Company" Association="ChuKySoModel.Store.FK_CKS_Contract_CKS_Company">
-            <End Role="CKS_Company" EntitySet="CKS_Company" />
-            <End Role="CKS_Contract" EntitySet="CKS_Contract" />
-          </AssociationSet>
-        </EntityContainer>
+      <Schema Namespace="ChuKySoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CKS_Agent">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ParentId" Type="int" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
           <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
@@ -67,7 +28,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AgentId" Type="int" Nullable="false" />
           <Property Name="ProviderId" Type="int" Nullable="false" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
@@ -77,7 +38,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AgentId" Type="int" Nullable="false" />
           <Property Name="TokenTypeId" Type="int" Nullable="false" />
           <Property Name="ProviderId" Type="int" Nullable="false" />
@@ -90,7 +51,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AgentId" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
@@ -99,7 +60,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="500" />
           <Property Name="TransTitle" Type="nvarchar" MaxLength="500" />
           <Property Name="CompanyType" Type="nvarchar" MaxLength="200" />
@@ -109,6 +70,10 @@
           <Property Name="Fax" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="varchar" MaxLength="100" />
           <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="SurrogateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SurrogateIdentity" Type="nvarchar" MaxLength="50" />
           <Property Name="CompanyCode" Type="nvarchar" MaxLength="50" />
           <Property Name="ActiveDate" Type="datetime" />
           <Property Name="LegalRepresentive" Type="nvarchar" MaxLength="100" />
@@ -119,6 +84,8 @@
           <Property Name="Directors" Type="nvarchar" MaxLength="1000" />
           <Property Name="Avatar" Type="ntext" />
           <Property Name="AllowedDate" Type="datetime" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContractNumber" Type="int" Nullable="false" />
           <Property Name="IsDisabled" Type="bit" Nullable="false" />
           <Property Name="CreateUser" Type="varchar" MaxLength="20" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
@@ -129,7 +96,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TokenType" Type="int" Nullable="false" />
           <Property Name="CompanyId" Type="int" Nullable="false" />
           <Property Name="AgentId" Type="int" Nullable="false" />
@@ -149,15 +116,16 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="CKS_TokenType">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProviderId" Type="int" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
           <Property Name="Duration" Type="int" Nullable="false" />
         </EntityType>
@@ -165,15 +133,15 @@
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_CKS_AgentProvider_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.Store.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_AgentProvider" Type="ChuKySoModel.Store.CKS_AgentProvider" Multiplicity="*" />
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_AgentProvider" Type="Self.CKS_AgentProvider" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CKS_Agent">
               <PropertyRef Name="Id" />
@@ -184,8 +152,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CKS_AgentProvider_CKS_Provider">
-          <End Role="CKS_Provider" Type="ChuKySoModel.Store.CKS_Provider" Multiplicity="1" />
-          <End Role="CKS_AgentProvider" Type="ChuKySoModel.Store.CKS_AgentProvider" Multiplicity="*" />
+          <End Role="CKS_Provider" Type="Self.CKS_Provider" Multiplicity="1" />
+          <End Role="CKS_AgentProvider" Type="Self.CKS_AgentProvider" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CKS_Provider">
               <PropertyRef Name="Id" />
@@ -196,8 +164,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CKS_AgentTokenType_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.Store.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_AgentTokenType" Type="ChuKySoModel.Store.CKS_AgentTokenType" Multiplicity="*" />
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_AgentTokenType" Type="Self.CKS_AgentTokenType" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CKS_Agent">
               <PropertyRef Name="Id" />
@@ -208,8 +176,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CKS_AgentTokenType_CKS_TokenType">
-          <End Role="CKS_TokenType" Type="ChuKySoModel.Store.CKS_TokenType" Multiplicity="1" />
-          <End Role="CKS_AgentTokenType" Type="ChuKySoModel.Store.CKS_AgentTokenType" Multiplicity="*" />
+          <End Role="CKS_TokenType" Type="Self.CKS_TokenType" Multiplicity="1" />
+          <End Role="CKS_AgentTokenType" Type="Self.CKS_AgentTokenType" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CKS_TokenType">
               <PropertyRef Name="Id" />
@@ -220,8 +188,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CKS_AgentUser_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.Store.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_AgentUser" Type="ChuKySoModel.Store.CKS_AgentUser" Multiplicity="*" />
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_AgentUser" Type="Self.CKS_AgentUser" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CKS_Agent">
               <PropertyRef Name="Id" />
@@ -232,8 +200,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CKS_Contract_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.Store.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_Contract" Type="ChuKySoModel.Store.CKS_Contract" Multiplicity="*" />
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_Contract" Type="Self.CKS_Contract" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CKS_Agent">
               <PropertyRef Name="Id" />
@@ -244,8 +212,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CKS_Contract_CKS_Company">
-          <End Role="CKS_Company" Type="ChuKySoModel.Store.CKS_Company" Multiplicity="1" />
-          <End Role="CKS_Contract" Type="ChuKySoModel.Store.CKS_Contract" Multiplicity="*" />
+          <End Role="CKS_Company" Type="Self.CKS_Company" Multiplicity="1" />
+          <End Role="CKS_Contract" Type="Self.CKS_Contract" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CKS_Company">
               <PropertyRef Name="Id" />
@@ -255,7 +223,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -286,46 +254,317 @@
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="ChuKySoModelStoreContainer">
+          <EntitySet Name="CKS_Agent" EntityType="Self.CKS_Agent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CKS_AgentProvider" EntityType="Self.CKS_AgentProvider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CKS_AgentTokenType" EntityType="Self.CKS_AgentTokenType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CKS_AgentUser" EntityType="Self.CKS_AgentUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CKS_Company" EntityType="Self.CKS_Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CKS_Contract" EntityType="Self.CKS_Contract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CKS_Provider" EntityType="Self.CKS_Provider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CKS_TokenType" EntityType="Self.CKS_TokenType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Agent" Association="Self.FK_CKS_AgentProvider_CKS_Agent">
+            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
+            <End Role="CKS_AgentProvider" EntitySet="CKS_AgentProvider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Provider" Association="Self.FK_CKS_AgentProvider_CKS_Provider">
+            <End Role="CKS_Provider" EntitySet="CKS_Provider" />
+            <End Role="CKS_AgentProvider" EntitySet="CKS_AgentProvider" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_Agent" Association="Self.FK_CKS_AgentTokenType_CKS_Agent">
+            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
+            <End Role="CKS_AgentTokenType" EntitySet="CKS_AgentTokenType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_TokenType" Association="Self.FK_CKS_AgentTokenType_CKS_TokenType">
+            <End Role="CKS_TokenType" EntitySet="CKS_TokenType" />
+            <End Role="CKS_AgentTokenType" EntitySet="CKS_AgentTokenType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CKS_AgentUser_CKS_Agent" Association="Self.FK_CKS_AgentUser_CKS_Agent">
+            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
+            <End Role="CKS_AgentUser" EntitySet="CKS_AgentUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CKS_Contract_CKS_Agent" Association="Self.FK_CKS_Contract_CKS_Agent">
+            <End Role="CKS_Agent" EntitySet="CKS_Agent" />
+            <End Role="CKS_Contract" EntitySet="CKS_Contract" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CKS_Contract_CKS_Company" Association="Self.FK_CKS_Contract_CKS_Company">
+            <End Role="CKS_Company" EntitySet="CKS_Company" />
+            <End Role="CKS_Contract" EntitySet="CKS_Contract" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ChuKySoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="ChuKySoEntities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="CKS_Agent" EntityType="ChuKySoModel.CKS_Agent" />
-          <EntitySet Name="CKS_AgentProvider" EntityType="ChuKySoModel.CKS_AgentProvider" />
-          <EntitySet Name="CKS_AgentTokenType" EntityType="ChuKySoModel.CKS_AgentTokenType" />
-          <EntitySet Name="CKS_AgentUser" EntityType="ChuKySoModel.CKS_AgentUser" />
-          <EntitySet Name="CKS_Company" EntityType="ChuKySoModel.CKS_Company" />
-          <EntitySet Name="CKS_Contract" EntityType="ChuKySoModel.CKS_Contract" />
-          <EntitySet Name="CKS_Provider" EntityType="ChuKySoModel.CKS_Provider" />
-          <EntitySet Name="CKS_TokenType" EntityType="ChuKySoModel.CKS_TokenType" />
-          <EntitySet Name="sysdiagrams" EntityType="ChuKySoModel.sysdiagram" />
-          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Agent" Association="ChuKySoModel.FK_CKS_AgentProvider_CKS_Agent">
+      <Schema Namespace="ChuKySoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CKS_Agent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CKS_AgentProvider" Relationship="Self.FK_CKS_AgentProvider_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_AgentProvider" />
+          <NavigationProperty Name="CKS_AgentTokenType" Relationship="Self.FK_CKS_AgentTokenType_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_AgentTokenType" />
+          <NavigationProperty Name="CKS_AgentUser" Relationship="Self.FK_CKS_AgentUser_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_AgentUser" />
+          <NavigationProperty Name="CKS_Contract" Relationship="Self.FK_CKS_Contract_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_Contract" />
+        </EntityType>
+        <EntityType Name="CKS_AgentProvider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AgentId" Type="Int32" Nullable="false" />
+          <Property Name="ProviderId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CKS_Agent" Relationship="Self.FK_CKS_AgentProvider_CKS_Agent" FromRole="CKS_AgentProvider" ToRole="CKS_Agent" />
+          <NavigationProperty Name="CKS_Provider" Relationship="Self.FK_CKS_AgentProvider_CKS_Provider" FromRole="CKS_AgentProvider" ToRole="CKS_Provider" />
+        </EntityType>
+        <EntityType Name="CKS_AgentTokenType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AgentId" Type="Int32" Nullable="false" />
+          <Property Name="TokenTypeId" Type="Int32" Nullable="false" />
+          <Property Name="ProviderId" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CKS_Agent" Relationship="Self.FK_CKS_AgentTokenType_CKS_Agent" FromRole="CKS_AgentTokenType" ToRole="CKS_Agent" />
+          <NavigationProperty Name="CKS_TokenType" Relationship="Self.FK_CKS_AgentTokenType_CKS_TokenType" FromRole="CKS_AgentTokenType" ToRole="CKS_TokenType" />
+        </EntityType>
+        <EntityType Name="CKS_AgentUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AgentId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CKS_Agent" Relationship="Self.FK_CKS_AgentUser_CKS_Agent" FromRole="CKS_AgentUser" ToRole="CKS_Agent" />
+        </EntityType>
+        <EntityType Name="CKS_Company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TransTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SurrogateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SurrogateIdentity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="LegalRepresentive" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LegalRepresentiveAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AuthorizedCapital" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DescriptionMajor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Directors" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AllowedDate" Type="DateTime" Precision="3" />
+          <Property Name="Tags" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ContractNumber" Type="Int32" Nullable="false" />
+          <Property Name="IsDisabled" Type="Boolean" Nullable="false" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateUser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CKS_Contract" Relationship="Self.FK_CKS_Contract_CKS_Company" FromRole="CKS_Company" ToRole="CKS_Contract" />
+        </EntityType>
+        <EntityType Name="CKS_Contract">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TokenType" Type="Int32" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="AgentId" Type="Int32" Nullable="false" />
+          <Property Name="RegisterDate" Type="DateTime" Precision="3" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="DiscountPercent" Type="Int32" Nullable="false" />
+          <Property Name="Discount" Type="Int32" Nullable="false" />
+          <Property Name="ContractType" Type="Int32" Nullable="false" />
+          <Property Name="ContractDuration" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CKS_Agent" Relationship="Self.FK_CKS_Contract_CKS_Agent" FromRole="CKS_Contract" ToRole="CKS_Agent" />
+          <NavigationProperty Name="CKS_Company" Relationship="Self.FK_CKS_Contract_CKS_Company" FromRole="CKS_Contract" ToRole="CKS_Company" />
+        </EntityType>
+        <EntityType Name="CKS_Provider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CKS_AgentProvider" Relationship="Self.FK_CKS_AgentProvider_CKS_Provider" FromRole="CKS_Provider" ToRole="CKS_AgentProvider" />
+        </EntityType>
+        <EntityType Name="CKS_TokenType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderId" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CKS_AgentTokenType" Relationship="Self.FK_CKS_AgentTokenType_CKS_TokenType" FromRole="CKS_TokenType" ToRole="CKS_AgentTokenType" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_CKS_AgentProvider_CKS_Agent">
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_AgentProvider" Type="Self.CKS_AgentProvider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CKS_Agent">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CKS_AgentProvider">
+              <PropertyRef Name="AgentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CKS_AgentTokenType_CKS_Agent">
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_AgentTokenType" Type="Self.CKS_AgentTokenType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CKS_Agent">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CKS_AgentTokenType">
+              <PropertyRef Name="AgentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CKS_AgentUser_CKS_Agent">
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_AgentUser" Type="Self.CKS_AgentUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CKS_Agent">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CKS_AgentUser">
+              <PropertyRef Name="AgentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CKS_Contract_CKS_Agent">
+          <End Role="CKS_Agent" Type="Self.CKS_Agent" Multiplicity="1" />
+          <End Role="CKS_Contract" Type="Self.CKS_Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CKS_Agent">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CKS_Contract">
+              <PropertyRef Name="AgentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CKS_AgentProvider_CKS_Provider">
+          <End Role="CKS_Provider" Type="Self.CKS_Provider" Multiplicity="1" />
+          <End Role="CKS_AgentProvider" Type="Self.CKS_AgentProvider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CKS_Provider">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CKS_AgentProvider">
+              <PropertyRef Name="ProviderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CKS_AgentTokenType_CKS_TokenType">
+          <End Role="CKS_TokenType" Type="Self.CKS_TokenType" Multiplicity="1" />
+          <End Role="CKS_AgentTokenType" Type="Self.CKS_AgentTokenType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CKS_TokenType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CKS_AgentTokenType">
+              <PropertyRef Name="TokenTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CKS_Contract_CKS_Company">
+          <End Role="CKS_Company" Type="Self.CKS_Company" Multiplicity="1" />
+          <End Role="CKS_Contract" Type="Self.CKS_Contract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CKS_Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CKS_Contract">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ChuKySoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CKS_Agent" EntityType="Self.CKS_Agent" />
+          <EntitySet Name="CKS_AgentProvider" EntityType="Self.CKS_AgentProvider" />
+          <EntitySet Name="CKS_AgentTokenType" EntityType="Self.CKS_AgentTokenType" />
+          <EntitySet Name="CKS_AgentUser" EntityType="Self.CKS_AgentUser" />
+          <EntitySet Name="CKS_Company" EntityType="Self.CKS_Company" />
+          <EntitySet Name="CKS_Contract" EntityType="Self.CKS_Contract" />
+          <EntitySet Name="CKS_Provider" EntityType="Self.CKS_Provider" />
+          <EntitySet Name="CKS_TokenType" EntityType="Self.CKS_TokenType" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Agent" Association="Self.FK_CKS_AgentProvider_CKS_Agent">
             <End Role="CKS_Agent" EntitySet="CKS_Agent" />
             <End Role="CKS_AgentProvider" EntitySet="CKS_AgentProvider" />
           </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_Agent" Association="ChuKySoModel.FK_CKS_AgentTokenType_CKS_Agent">
+          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_Agent" Association="Self.FK_CKS_AgentTokenType_CKS_Agent">
             <End Role="CKS_Agent" EntitySet="CKS_Agent" />
             <End Role="CKS_AgentTokenType" EntitySet="CKS_AgentTokenType" />
           </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentUser_CKS_Agent" Association="ChuKySoModel.FK_CKS_AgentUser_CKS_Agent">
+          <AssociationSet Name="FK_CKS_AgentUser_CKS_Agent" Association="Self.FK_CKS_AgentUser_CKS_Agent">
             <End Role="CKS_Agent" EntitySet="CKS_Agent" />
             <End Role="CKS_AgentUser" EntitySet="CKS_AgentUser" />
           </AssociationSet>
-          <AssociationSet Name="FK_CKS_Contract_CKS_Agent" Association="ChuKySoModel.FK_CKS_Contract_CKS_Agent">
+          <AssociationSet Name="FK_CKS_Contract_CKS_Agent" Association="Self.FK_CKS_Contract_CKS_Agent">
             <End Role="CKS_Agent" EntitySet="CKS_Agent" />
             <End Role="CKS_Contract" EntitySet="CKS_Contract" />
           </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Provider" Association="ChuKySoModel.FK_CKS_AgentProvider_CKS_Provider">
+          <AssociationSet Name="FK_CKS_AgentProvider_CKS_Provider" Association="Self.FK_CKS_AgentProvider_CKS_Provider">
             <End Role="CKS_Provider" EntitySet="CKS_Provider" />
             <End Role="CKS_AgentProvider" EntitySet="CKS_AgentProvider" />
           </AssociationSet>
-          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_TokenType" Association="ChuKySoModel.FK_CKS_AgentTokenType_CKS_TokenType">
+          <AssociationSet Name="FK_CKS_AgentTokenType_CKS_TokenType" Association="Self.FK_CKS_AgentTokenType_CKS_TokenType">
             <End Role="CKS_TokenType" EntitySet="CKS_TokenType" />
             <End Role="CKS_AgentTokenType" EntitySet="CKS_AgentTokenType" />
           </AssociationSet>
-          <AssociationSet Name="FK_CKS_Contract_CKS_Company" Association="ChuKySoModel.FK_CKS_Contract_CKS_Company">
+          <AssociationSet Name="FK_CKS_Contract_CKS_Company" Association="Self.FK_CKS_Contract_CKS_Company">
             <End Role="CKS_Company" EntitySet="CKS_Company" />
             <End Role="CKS_Contract" EntitySet="CKS_Contract" />
           </AssociationSet>
@@ -360,231 +599,6 @@
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
-        <EntityType Name="CKS_Agent">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ParentId" Type="Int32" />
-          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Firstname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Lastname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Email1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Email2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Mobile1" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="Mobile2" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="Status" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="CKS_AgentProvider" Relationship="ChuKySoModel.FK_CKS_AgentProvider_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_AgentProvider" />
-          <NavigationProperty Name="CKS_AgentTokenType" Relationship="ChuKySoModel.FK_CKS_AgentTokenType_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_AgentTokenType" />
-          <NavigationProperty Name="CKS_AgentUser" Relationship="ChuKySoModel.FK_CKS_AgentUser_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_AgentUser" />
-          <NavigationProperty Name="CKS_Contract" Relationship="ChuKySoModel.FK_CKS_Contract_CKS_Agent" FromRole="CKS_Agent" ToRole="CKS_Contract" />
-        </EntityType>
-        <EntityType Name="CKS_AgentProvider">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="AgentId" Type="Int32" Nullable="false" />
-          <Property Name="ProviderId" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="CKS_Agent" Relationship="ChuKySoModel.FK_CKS_AgentProvider_CKS_Agent" FromRole="CKS_AgentProvider" ToRole="CKS_Agent" />
-          <NavigationProperty Name="CKS_Provider" Relationship="ChuKySoModel.FK_CKS_AgentProvider_CKS_Provider" FromRole="CKS_AgentProvider" ToRole="CKS_Provider" />
-        </EntityType>
-        <EntityType Name="CKS_AgentTokenType">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="AgentId" Type="Int32" Nullable="false" />
-          <Property Name="TokenTypeId" Type="Int32" Nullable="false" />
-          <Property Name="ProviderId" Type="Int32" Nullable="false" />
-          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="EndDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="CKS_Agent" Relationship="ChuKySoModel.FK_CKS_AgentTokenType_CKS_Agent" FromRole="CKS_AgentTokenType" ToRole="CKS_Agent" />
-          <NavigationProperty Name="CKS_TokenType" Relationship="ChuKySoModel.FK_CKS_AgentTokenType_CKS_TokenType" FromRole="CKS_AgentTokenType" ToRole="CKS_TokenType" />
-        </EntityType>
-        <EntityType Name="CKS_AgentUser">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="AgentId" Type="Int32" Nullable="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="CKS_Agent" Relationship="ChuKySoModel.FK_CKS_AgentUser_CKS_Agent" FromRole="CKS_AgentUser" ToRole="CKS_Agent" />
-        </EntityType>
-        <EntityType Name="CKS_Company">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="TransTitle" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="CompanyType" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
-          <Property Name="Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-          <Property Name="Website" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="CompanyCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="ActiveDate" Type="DateTime" Precision="3" />
-          <Property Name="LegalRepresentive" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="LegalRepresentiveAddress" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="AuthorizedCapital" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="DescriptionMajor" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Directors" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-          <Property Name="Avatar" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="AllowedDate" Type="DateTime" Precision="3" />
-          <Property Name="IsDisabled" Type="Boolean" Nullable="false" />
-          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UpdateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="CKS_Contract" Relationship="ChuKySoModel.FK_CKS_Contract_CKS_Company" FromRole="CKS_Company" ToRole="CKS_Contract" />
-        </EntityType>
-        <EntityType Name="CKS_Contract">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="TokenType" Type="Int32" Nullable="false" />
-          <Property Name="CompanyId" Type="Int32" Nullable="false" />
-          <Property Name="AgentId" Type="Int32" Nullable="false" />
-          <Property Name="RegisterDate" Type="DateTime" Precision="3" />
-          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Price" Type="Int32" Nullable="false" />
-          <Property Name="Amount" Type="Int32" Nullable="false" />
-          <Property Name="DiscountPercent" Type="Int32" Nullable="false" />
-          <Property Name="Discount" Type="Int32" Nullable="false" />
-          <Property Name="ContractType" Type="Int32" Nullable="false" />
-          <Property Name="ContractDuration" Type="Int32" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="CKS_Agent" Relationship="ChuKySoModel.FK_CKS_Contract_CKS_Agent" FromRole="CKS_Contract" ToRole="CKS_Agent" />
-          <NavigationProperty Name="CKS_Company" Relationship="ChuKySoModel.FK_CKS_Contract_CKS_Company" FromRole="CKS_Contract" ToRole="CKS_Company" />
-        </EntityType>
-        <EntityType Name="CKS_Provider">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="CKS_AgentProvider" Relationship="ChuKySoModel.FK_CKS_AgentProvider_CKS_Provider" FromRole="CKS_Provider" ToRole="CKS_AgentProvider" />
-        </EntityType>
-        <EntityType Name="CKS_TokenType">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ProviderId" Type="Int32" Nullable="false" />
-          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Duration" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CKS_AgentTokenType" Relationship="ChuKySoModel.FK_CKS_AgentTokenType_CKS_TokenType" FromRole="CKS_TokenType" ToRole="CKS_AgentTokenType" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <Association Name="FK_CKS_AgentProvider_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_AgentProvider" Type="ChuKySoModel.CKS_AgentProvider" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CKS_Agent">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CKS_AgentProvider">
-              <PropertyRef Name="AgentId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CKS_AgentTokenType_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_AgentTokenType" Type="ChuKySoModel.CKS_AgentTokenType" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CKS_Agent">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CKS_AgentTokenType">
-              <PropertyRef Name="AgentId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CKS_AgentUser_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_AgentUser" Type="ChuKySoModel.CKS_AgentUser" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CKS_Agent">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CKS_AgentUser">
-              <PropertyRef Name="AgentId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CKS_Contract_CKS_Agent">
-          <End Role="CKS_Agent" Type="ChuKySoModel.CKS_Agent" Multiplicity="1" />
-          <End Role="CKS_Contract" Type="ChuKySoModel.CKS_Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CKS_Agent">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CKS_Contract">
-              <PropertyRef Name="AgentId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CKS_AgentProvider_CKS_Provider">
-          <End Role="CKS_Provider" Type="ChuKySoModel.CKS_Provider" Multiplicity="1" />
-          <End Role="CKS_AgentProvider" Type="ChuKySoModel.CKS_AgentProvider" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CKS_Provider">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CKS_AgentProvider">
-              <PropertyRef Name="ProviderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CKS_AgentTokenType_CKS_TokenType">
-          <End Role="CKS_TokenType" Type="ChuKySoModel.CKS_TokenType" Multiplicity="1" />
-          <End Role="CKS_AgentTokenType" Type="ChuKySoModel.CKS_AgentTokenType" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CKS_TokenType">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CKS_AgentTokenType">
-              <PropertyRef Name="TokenTypeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CKS_Contract_CKS_Company">
-          <End Role="CKS_Company" Type="ChuKySoModel.CKS_Company" Multiplicity="1" />
-          <End Role="CKS_Contract" Type="ChuKySoModel.CKS_Contract" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CKS_Company">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CKS_Contract">
-              <PropertyRef Name="CompanyId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -670,6 +684,10 @@
                 <ScalarProperty Name="Fax" ColumnName="Fax" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="SurrogateName" ColumnName="SurrogateName" />
+                <ScalarProperty Name="SurrogateIdentity" ColumnName="SurrogateIdentity" />
                 <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
                 <ScalarProperty Name="ActiveDate" ColumnName="ActiveDate" />
                 <ScalarProperty Name="LegalRepresentive" ColumnName="LegalRepresentive" />
@@ -680,6 +698,8 @@
                 <ScalarProperty Name="Directors" ColumnName="Directors" />
                 <ScalarProperty Name="Avatar" ColumnName="Avatar" />
                 <ScalarProperty Name="AllowedDate" ColumnName="AllowedDate" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="ContractNumber" ColumnName="ContractNumber" />
                 <ScalarProperty Name="IsDisabled" ColumnName="IsDisabled" />
                 <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
@@ -722,6 +742,7 @@
               <MappingFragment StoreEntitySet="CKS_TokenType">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ProviderId" ColumnName="ProviderId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Duration" ColumnName="Duration" />
               </MappingFragment>
@@ -776,8 +797,9 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

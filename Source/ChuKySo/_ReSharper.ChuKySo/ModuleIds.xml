@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="1C66C79E-2A01-4745-9283-6901A4CFD64E" ModuleId="ChuKySo.BL" />
+  <Module PersistentId="AE659F66-A695-465B-B7B5-C72B67129282" ModuleId="ChuKySo.Tools" />
+  <Module PersistentId="415698E9-A0D4-4B24-B581-01F8ABE212A0" ModuleId="ChuKySo.BL.Tests" />
+</Modules>

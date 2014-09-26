@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="29ef6ade010c475ea82b2216da190063" Name="Diagram1">
+      <Diagram DiagramId="aac7e1750c864065b0adf859721944c4" Name="Diagram1">
         <EntityTypeShape EntityType="ChuKySoModel.CKS_Agent" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ChuKySoModel.CKS_AgentProvider" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ChuKySoModel.CKS_AgentTokenType" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="ChuKySoModel.CKS_AgentUser" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ChuKySoModel.CKS_Company" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChuKySoModel.CKS_Company" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ChuKySoModel.CKS_Contract" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ChuKySoModel.CKS_Provider" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ChuKySoModel.CKS_TokenType" Width="1.5" PointX="3.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChuKySoModel.CKS_TokenType" Width="1.5" PointX="3.75" PointY="17.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ChuKySoModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ChuKySoModel.FK_CKS_AgentProvider_CKS_Agent" ManuallyRouted="false" />
         <AssociationConnector Association="ChuKySoModel.FK_CKS_AgentTokenType_CKS_Agent" ManuallyRouted="false" />

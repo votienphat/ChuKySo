@@ -40,6 +40,12 @@ namespace Dsms.Repository
             return dbResult;
         }
 
+        public T Get(object primaryKey)
+        {
+            var dbResult = DbSet.Find(primaryKey);
+            return dbResult;
+        }
+
         /// <summary>
         /// Returns the object with the primary key specifies or the default for the type
         /// </summary>
@@ -58,17 +64,16 @@ namespace Dsms.Repository
 
         public virtual int Insert(T entity)
         {
-            dynamic obj = DbSet.Add(entity);
-            _unitOfWork.Db.SaveChanges();
-            return obj.Id;
+            DbSet.Add(entity);
+            return _unitOfWork.Commit();
 
         }
 
-        public virtual void Update(T entity)
+        public virtual int Update(T entity)
         {
             DbSet.Attach(entity);
             _unitOfWork.Db.Entry(entity).State = EntityState.Modified;
-            _unitOfWork.Db.SaveChanges();
+            return _unitOfWork.Commit();
         }
 
         public int Delete(T entity)
@@ -77,9 +82,9 @@ namespace Dsms.Repository
             {
                 DbSet.Attach(entity);
             }
-            dynamic obj = DbSet.Remove(entity);
-            this._unitOfWork.Db.SaveChanges();
-            return obj.Id;
+            DbSet.Remove(entity);
+            _unitOfWork.Commit();
+            return _unitOfWork.Commit();
         }
 
         public Dictionary<string, string> GetAuditNames(dynamic dynamicObject)
@@ -87,12 +92,25 @@ namespace Dsms.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T> GetAll()
+        public IQueryable<T> GetAll()
         {
-            return DbSet.AsEnumerable().ToList();
+            return DbSet;
         }
 
-        #region Protected Methods
+        /// <summary>
+        /// Returns all the rows for type T
+        /// </summary>
+        /// <param name="includeProperties"></param>
+        /// <returns></returns>
+        public IQueryable<T> GetAll(List<Expression<Func<T, object>>> includeProperties)
+        {
+            IQueryable<T> query = DbSet;
+
+            if (includeProperties != null)
+                includeProperties.ForEach(i => query = query.Include(i));
+
+            return query;
+        }
 
         public virtual IQueryable<T> Get(
             Expression<Func<T, bool>> filter = null,
@@ -119,7 +137,5 @@ namespace Dsms.Repository
 
             return query;
         }
-
-        #endregion
     }
 }

@@ -1,0 +1,6 @@
+﻿9/18/2014 11:56:24 PM-----Message : ScrapperProcessing
+9/18/2014 11:56:25 PM----Object[Method] : Log-----Message : Thread was being aborted.-----Source :    at Common.NetworkCommon.SendGetRequest(String requestUrl, CookieContainer cookieCon, String referer, String& htmlResult, String& nextLocation, Boolean allowRedirect) in d:\Freelance\Project\2014\DigitalSignature\Source\Libs\Common\NetworkCommon.cs:line 132
+   at ChuKySo.BL.Business.DuLieuCongTy.GetCompanyList(String domain, String html) in d:\Freelance\Project\2014\DigitalSignature\Source\ChuKySo\Business Layer\ChuKySo.BL\Business\DuLieuCongTy.cs:line 109
+   at ChuKySo.BL.Business.DuLieuCongTy.SearchingCompany(String link) in d:\Freelance\Project\2014\DigitalSignature\Source\ChuKySo\Business Layer\ChuKySo.BL\Business\DuLieuCongTy.cs:line 46
+   at ChuKySo.BL.Business.Scrapper.SearchingCompany(String link) in d:\Freelance\Project\2014\DigitalSignature\Source\ChuKySo\Business Layer\ChuKySo.BL\Business\Scrapper.cs:line 29
+   at ChuKySo.Tools.frmMain.ScrapperProcessing() in d:\Freelance\Project\2014\DigitalSignature\Source\ChuKySo\Presentation Layer\ChuKySo.Tools\Form1.cs:line 75

@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Libs\DLL\Common.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Libs\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
@@ -66,10 +62,12 @@
   <ItemGroup>
     <Compile Include="BoFactory.cs" />
     <Compile Include="Business\BoCaoDn.cs" />
+    <Compile Include="Business\DuLieuCongTy.cs" />
     <Compile Include="Business\DanhBaDoanhNghiep.cs" />
     <Compile Include="Business\Repository\BaseRepository.cs" />
     <Compile Include="Business\Repository\CompanyRepository.cs" />
     <Compile Include="Business\Scrapper.cs" />
+    <Compile Include="Interface\IDuLieuCongTy.cs" />
     <Compile Include="RepositoryFactory.cs" />
     <Compile Include="Interface\IDanhBaDoanhNghiep.cs" />
     <Compile Include="Interface\IBoCaoDn.cs" />
@@ -121,7 +119,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Libs\Common\Common.csproj">
+      <Project>{16d3b242-b070-48a3-8661-751ee10cc4c9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

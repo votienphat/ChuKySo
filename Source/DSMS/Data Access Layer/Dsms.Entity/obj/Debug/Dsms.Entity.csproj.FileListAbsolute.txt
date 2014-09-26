@@ -1,0 +1,7 @@
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Data Access Layer\Dsms.Entity\bin\Debug\Dsms.Entity.dll.config
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Data Access Layer\Dsms.Entity\bin\Debug\Dsms.Entity.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Data Access Layer\Dsms.Entity\bin\Debug\Dsms.Entity.pdb
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Data Access Layer\Dsms.Entity\bin\Debug\EntityFramework.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Data Access Layer\Dsms.Entity\bin\Debug\EntityFramework.xml
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Data Access Layer\Dsms.Entity\obj\Debug\Dsms.Entity.dll
+D:\Freelance\Project\2014\DigitalSignature\Source\DSMS\Data Access Layer\Dsms.Entity\obj\Debug\Dsms.Entity.pdb

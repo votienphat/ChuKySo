@@ -1,0 +1,9 @@
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\obj\Debug\IoC.Service.csprojResolveAssemblyReference.cache
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\IoC.Service.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\IoC.Service.pdb
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Core.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Windsor.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Core.xml
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\bin\Debug\Castle.Windsor.xml
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\obj\Debug\IoC.Service.dll
+D:\Freelance\Project\2014\eCCore\Source\eCC\Core Layer\IoC.Service\obj\Debug\IoC.Service.pdb

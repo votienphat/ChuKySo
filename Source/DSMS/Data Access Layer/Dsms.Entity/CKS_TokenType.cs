@@ -21,6 +21,7 @@ namespace Dsms.Entity
     
         public int Id { get; set; }
         public int ProviderId { get; set; }
+        public string Code { get; set; }
         public string Title { get; set; }
         public int Duration { get; set; }
     

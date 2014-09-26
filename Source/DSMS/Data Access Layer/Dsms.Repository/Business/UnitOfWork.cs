@@ -36,10 +36,11 @@ namespace Dsms.Repository
             _transaction = new TransactionScope();
         }
 
-        public void Commit()
+        public int Commit()
         {
-            _db.SaveChanges();
+            var result = _db.SaveChanges();
             _transaction.Complete();
+            return result;
         }
 
         public DbContext Db

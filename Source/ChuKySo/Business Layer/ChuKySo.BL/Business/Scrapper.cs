@@ -24,6 +24,10 @@ namespace ChuKySo.BL.Business
             {
                 result = BoFactory.DanhBaDoanhNghiep.SearchingCompany(link);
             }
+            else if (link.ToLower().Contains("dulieucongty.com"))
+            {
+                result = BoFactory.DuLieuCongTy.SearchingCompany(link);
+            }
 
             return result;
         }

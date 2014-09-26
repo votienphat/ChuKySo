@@ -29,6 +29,10 @@ namespace Dsms.Entity
         public string Fax { get; set; }
         public string Email { get; set; }
         public string Website { get; set; }
+        public string ContactName { get; set; }
+        public string ContactPhone { get; set; }
+        public string SurrogateName { get; set; }
+        public string SurrogateIdentity { get; set; }
         public string CompanyCode { get; set; }
         public Nullable<System.DateTime> ActiveDate { get; set; }
         public string LegalRepresentive { get; set; }
@@ -39,6 +43,8 @@ namespace Dsms.Entity
         public string Directors { get; set; }
         public string Avatar { get; set; }
         public Nullable<System.DateTime> AllowedDate { get; set; }
+        public string Tags { get; set; }
+        public int ContractNumber { get; set; }
         public bool IsDisabled { get; set; }
         public string CreateUser { get; set; }
         public System.DateTime CreateDate { get; set; }

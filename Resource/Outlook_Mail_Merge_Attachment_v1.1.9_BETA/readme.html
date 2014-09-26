@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>OMMA</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<style type="text/css">		
+		body {
+			background-color: #FFFFFF;
+			font-family : Calibri, Arial, Helvetica, sans-serif;
+		}                                 
+		
+		h1 {
+			font-size: 150%;
+			font-family: Cambria, Georgia, "Times New Roman";
+			font-weight: bold;
+			color:#404F9D;	
+		}
+		
+		h2 {
+			font-family: Cambria, Georgia, "Times New Roman";
+			font-size: 130%;
+			color:#404F9D;
+		}   
+		
+		h3 {    	
+			font-family: Cambria, Georgia, "Times New Roman";
+			font-size: 100%;	
+			color:#404F9D;
+		}
+
+		a {
+			color: #404F9D;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			color: #FF6600;;
+		}
+
+	</style>
+	
+
+</head>
+<body>           
+
+<h1><img src="./ommalogo.png" /> Outlook mail merge attachment <i>(OMMA)</i></h1>
+<p>
+Version 1.1.9 BETA, 26 October 2013
+</p>
+
+<h2>Information</h2>
+<p>
+Outlook Mail Merge Attachment supplies mail merge process in Microsoft Office Word and Outlook with the functionality to add an attachment.
+</p>
+<p>
+The script works as follows. First, you set Microsoft Outlook to work offline, this way the emails are stored in the Outbox but not actually send. Then you perform the mail merge using Microsoft Word as you are used to. All merged emails are now stored in the Outlook Outbox. Then you run the script, 'outlook mail merge attachment.vbs', which adds an attachment to all emails in the Outbox. To send you emails, you simply set Outlook to work Online again. 
+</p>
+
+<h2>Preparation</h2>
+<ul>
+<li><b>Requirements</b>
+<ul>
+<li>Microsoft Word and Outlook, versions 2003, 2007, 2010 or 2013.</li>
+<li>Outlook must be configured such that no messages pop-up when one presses the "Send" button. One known problem is for example the spell check that pops up before sending an email. </li>
+<li>Microsoft Windows</li> 
+<li>In Outlook 2003, the internal outlook editor must be used (this is default), not the word editor.</li>
+</ul>
+
+</li>
+<li><b>Knowledge</b>
+<ul>
+<li>The user is familiar with a Mail Merge using Microsoft Word.</li>
+<li>For Mail Merge in Microsoft Word 2007, see: "Use mail merge to send personalized e-mail messages to your e-mail address list". <a class="seeref" href="http://office.microsoft.com/en-us/word/HA101091621033.aspx" target="_blank" >see reference..</a></li>
+<li>For Mail Merge in Mircrosoft Word 2003, see: "Answer Box: Send e-mail messages to a group using mail merge in Word". <a class="seeref" href="http://office.microsoft.com/en-us/word/HA011464811033.aspx?pid=CH011218841033" target="_blank">see reference..</a></li>
+</ul>
+<li><b>Download</b>
+<ul><li>The zip-file containing Outlook Mail Merge Attachment can be downloaded from <a href="http://omma.sourceforge.net" target="_blank"> http://omma.sourceforge.net</a>. </li></ul>
+</li>
+</ul>
+
+<h2>How-to</h2>
+<ol>
+	<li>Set Outlook to work Offline.
+	<ul>
+		<li>Start Outlook, select ribbon [Send/Receive] &raquo; [Work Offline]. <i>([File] &raquo; [Work Offline] in Word 2003.)</i></li>
+		<li>This ensures that the email you send is stored in the Outbox before sending. You can try this easily yourself. Note: Make sure you do not accidently send the emails when you close Outlook.
+	</ul>
+	</li>
+	<li>Mail Merge
+	<ul>
+		<li>Use Microsoft Word to mail merge your emails, just as you are to. They are now stored in the Outlook Outbox.</li>
+	</ul>
+	</li>
+    <li>Add the attachment to all emails in the Outlook Outbox
+    <ul>
+    	<li>Run (double-click) <strong>Outlook Mail Merge Attachment.vbs</strong></li>
+        <li>You are asked which file to add to the emails. Note that you cannot touch the keyboard or mouse while processing the emails.</li>
+        <li>Sometimes, the "Attach file" dialog is hidden behind another window. Please minimize all windows when OMMA seems to stop right after the welcome message.</li>
+        <li>When the script is finished, it will display "Successfully added the attachment to 12 emails".</li>
+	</ul>
+    <li>Check
+    <ul><li>You are able to check your emails with attachment since they still are in the Outlook Outbox.</li></ul>
+    </li>
+    <li>Send the emails
+    <ul>
+    	<li>In Outlook, unselect ribbon [Send/Receive] &raquo; [Work Offline]. <i>([File] &raquo; [Work Offline] in Word 2003.)</i></li>
+        <li>Now the emails in the Outbox are really send.</li>
+	</ul>
+
+</ol>
+
+
+<h2>About</h2>
+<h3>Development</h3>
+<p>
+<ul>
+<li>Wouter Westerveld, Lead Developer</li>
+</ul>
+</p>
+
+<h3>Contact and donations</h3>
+<p>
+Please consult the <a href="http://omma.sourceforge.net">OMMA website</a> for the <a href="http://omma.sourceforge.net/feedback.php">contact form</a>.  Donations can be made using pay-pal, information can be found at the <a href="http://sourceforge.net/donate/index.php?group_id=271205">sourceforge website</a>.
+</p>
+
+<h2>Disclaimer</h2>
+<p>
+Copyright &copy; 2006-2013 Wouter Westerveld
+</p>
+<p>
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.
+</p>
+
+
+<hr />
+<p>
+http://omma.sourceforge.net<br />
+</p>
+
+
+</body>
+</html>
